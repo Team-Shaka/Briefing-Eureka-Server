@@ -7,8 +7,8 @@ import org.springframework.web.servlet.view.RedirectView;
 @RestController
 public class RootController {
 
-    @GetMapping("/custom-dashboard")
-    public RedirectView redirectToEurekaDashboard() {
-        return new RedirectView("/eureka");
+    @GetMapping("/health")
+    public String redirectToEurekaDashboard() {
+        return "I'm health!";
     }
 }
